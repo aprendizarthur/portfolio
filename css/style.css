@@ -1,0 +1,214 @@
+/*Estilos globais*/
+    html{
+        scroll-behavior: smooth;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    li{
+        display: block;
+    }
+
+/*Header*/
+    header nav{
+        background-color: #F7F6F5;
+        border-radius: 24px;
+    }
+
+    nav ul{
+        list-style: none;
+        padding: 14px 7px 14px 7px;
+    }
+
+    nav a{
+        text-decoration: none;
+        background-color: #F7F6F5;
+        border: solid 1px #F7F6F5;
+        color: #272727;
+        border-radius: 24px;
+    }
+
+    nav a:hover{
+        text-decoration: none;
+        background-color: #f0eeee;
+        border: solid 1px #F7F6F5;
+        color: #272727;
+        border-radius: 24px;
+    }
+
+    nav ul li{
+        display: inline;
+        text-align: center;
+    }
+
+    .selecionado a{
+        background-color: #272727;
+        border: solid 1px #272727;
+        color: #FFFFFF;
+    }
+
+    .selecionado a:hover{
+        background-color: #272727;
+        border: solid 1px #272727;
+        color: #FFFFFF;
+    }
+
+    .notificacao-blog{
+        position: relative;
+        bottom: 5px;
+        left: 4px;
+    }
+
+/*Main*/
+    .box-tecnologias{
+        border-radius: 24px;
+        background-color: #f0f0f0;
+    }
+
+    .box-projetos{
+        border-radius: 24px;
+        background-color: #f0f0f0;
+    }
+
+    .projeto img{
+        border-radius: 24px;
+        width: 100%;
+        height: 100%;
+
+    }
+
+/*Cores texto*/
+    .cinza{
+        color: #989796;
+    }
+
+/*Botões*/
+    .btn{
+        display: inline-block;
+        width: 100%;
+    }
+
+    .btn-primary{
+        background-color: #272727 !important;
+        border: solid 1px #272727 !important;
+        color: #FFFFFF !important;  
+        border-radius: 24px !important;
+    }
+
+    .btn-primary:hover{
+        background-color: #FFFFFF !important;
+        border: solid 1px #272727 !important;
+        color: #272727 !important;  
+        border-radius: 24px !important;
+    }
+
+    .btn-secondary{
+        background-color: #FFFFFF !important;
+        border: solid 1px #272727 !important;
+        color: #272727 !important;  
+        border-radius: 24px !important;
+    }
+
+    .btn-secondary:hover{
+        background-color: #272727 !important;
+        border: solid 1px #272727 !important;
+        color: #FFFFFF !important;  
+        border-radius: 24px !important;
+    }
+
+/*Fontes*/
+    .inter-regular {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .inter-semibold {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 550;
+        font-style: normal;
+    }
+
+    .inter-bold {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .poppins-light {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .poppins-semibold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+/*Escala texto*/
+    .h1-cta{
+        font-size: 2.5rem !important;
+    }  
+    
+    .p-cta{
+        font-size: 1.3rem !important;
+    }
+
+    h1{
+        font-size: 1.88rem !important;
+    }
+
+    h2{
+        font-size: 1.350rem !important;
+    }
+
+    h3{
+        font-size: 1.402rem !important;
+    }
+
+    p{
+        font-size: 1rem !important;
+    }
+
+    blockquote{
+        font-size: 1rem !important;
+    }
+
+    small{
+        font-size: 0.889rem !important;
+    }
+
+    span{
+        font-size: 1rem !important;
+    }
+
+/*Estilos específicos por tamanho de tela*/
+    
+    /*Telas pequenas*/
+        @media(max-width: 475px){
+            .imagem-projeto{
+                margin-bottom: 10px;
+                height: 35vh !important;
+            }
+        }
+
+    /*Telas médias*/
+    @media(min-width: 478px) and (max-width: 768px){
+        .imagem-projeto{
+            margin-bottom: 10px;
+            height: 35vh !important;
+        }
+    }
