@@ -117,6 +117,16 @@
         width: auto;
     }
 
+    .box-form{
+        border-radius: 24px;
+        border: solid 1px #989796;
+        background-color: #f0f0f0;
+    }
+
+    .mensagem-erro{
+        color: #FB0404;
+    }
+
 /*Footer*/
     footer{
         border-radius: 24px;
