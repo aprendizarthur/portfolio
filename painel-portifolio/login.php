@@ -87,7 +87,7 @@ login($mysqli);
             <footer>
                 <div class="row d-flex justify-content-center m-0">
                     <div class="col-12 col-md-6 text-center">
-                        <small class="poppins-regular cinza">@ <?php $ano = date("Y"); echo $ano; ?> Arthur Vieira - Todos os direitos reservados.</small>
+                        <small class="poppins-regular cinza">© <?php $ano = date("Y"); echo $ano; ?> Arthur Vieira - Todos os direitos reservados.</small>
                     </div>
                 </div>
             </footer>

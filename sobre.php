@@ -52,23 +52,23 @@ session_start();
             <main>
             <!--ABERTURA SECTION CTA-->
                 <section id="cta">
-                    <div class="row d-flex justify-content-center mt-3 mb-5">
+                    <div class="row d-flex justify-content-center mt-3 mb-3">
                         <div class="col-11 col-md-10 col-lg-6 p-2 text-center">
-                            <h1 class="h1-cta inter-bold">Oi, eu me chamo Arthur!</h1>
-                            <p class="p-cta inter-regular cinza">Curso ciência da computação e sou freelancer desenvolvendo sites institucionais para empresas.</p> 
+                            <h1 class="h1-cta inter-bold">Oi, eu me chamo Arthur Vieira!</h1>
+                            <p class="p-cta poppins-regular preto">Sou freelancer desenvolvendo sites institucionais para empresas.</p> 
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-2">
-                                    <a class="py-2 btn btn-primary" href="#projetos"><span class="poppins-semibold">Projetos</span></a>
+                                    <a class="py-2 btn btn-primary" href="#projetos"><span class="poppins-semibold">Contato</span></a>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <a class="py-2 btn btn-secondary" href=""><span class="poppins-semibold"><i class="i-secondary fa-solid fa-download fa-lg me-2"></i>Currículo</span></a>    
                                 </div>
                                 <div class="col-12 col-md-12 mt-3">
-                                    <section>
-                                        <a href=""><i class="fa-solid fa-envelope fa-xl mx-2" style="color: #989796;"></i></a>
-                                        <a href=""><i class="fa-brands fa-github fa-xl mx-2" style="color: #989796;"></i></a>
-                                        <a href=""><i class="fa-brands fa-linkedin fa-xl mx-2" style="color:#989796;"></i></a>
-                                        <a href=""><i class="fa-brands fa-whatsapp fa-xl mx-2" style="color: #989796;"></i></a>
+                                    <section id="redes">
+                                        <a href=""><i class="fa-solid fa-envelope fa-xl mx-2"></i></a>
+                                        <a href=""><i class="fa-brands fa-github fa-xl mx-2"></i></a>
+                                        <a href=""><i class="fa-brands fa-linkedin fa-xl mx-2"></i></a>
+                                        <a href=""><i class="fa-brands fa-whatsapp fa-xl mx-2"></i></a>
                                     </section>
                                 </div>
                             </div>
@@ -79,9 +79,10 @@ session_start();
 
             <!--ABERTURA SECTION PROJETOS-->
                 <section id="projetos">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-11 col-md-10 mb-3 text-center">
-                            <h1 class="inter-bold">Meus projetos</h1> 
+                    <div class="row d-flex justify-content-center mb-5">
+                        <div class="col-11 col-md-10 mt-4 text-left">
+                            <h1 class="inter-bold">Projetos</h1>
+                            <hr> 
                         </div>
 
                         <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
@@ -89,7 +90,7 @@ session_start();
                                 <div class="row d-flex justify-content-between">
                                     <div class="col-12 col-md-12 col-lg-5 d-flex justify-content-center align-items-center">
                                         <a href="">
-                                            <img class="imagem-projeto" src="https://i0.wp.com/assets.b9.com.br/wp-content/uploads/2021/05/nubankb9.jpg?fit=1280%2C720&ssl=1" alt="Alt imagem">
+                                            <img class="imagem-projeto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnwpAtednZLvw79CwK8Npyp87HYxgXRVfwpQ&s" alt="Alt imagem">
                                         </a>
                                     </div>
                                     <div class="col-12 col-md-12 col-lg-7">
@@ -215,7 +216,7 @@ session_start();
 
             <!--ABERTURA SECTION CONTATO-->
             <section id="contato">
-                <div class="row d-flex justify-content-center align-items-center my-5">
+                <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-11 col-md-10 bg-preto p-4 d-flex justify-content-center">
                         <hgroup>
                             <h1 class="inter-bold branco">Tem algum projeto em mente?</h1>
@@ -229,9 +230,10 @@ session_start();
 
             <!--ABERTURA SECTION BLOG-->
             <section id="blog">
-                    <div class="row mt-5 mb-5 d-flex justify-content-center">
-                        <div class="col-11 col-md-10 mb-3 text-center">
-                            <h1 class="inter-bold">Blog</h1> 
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-11 col-md-10 mt-5 text-">
+                            <h1 class="inter-bold">Blog</h1>
+                            <hr> 
                         </div>
 
                         <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
@@ -370,15 +372,10 @@ session_start();
 
         <!--ABERTURA FOOTER-->
             <footer>
-                <div class="row d-flex justify-content-center m-0">
+                <div class="row d-flex justify-content-center mt-4">
                     <div class="col-12 col-md-6 text-center">
-                        <ul>
-                            <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="projetos.php">Projetos</a></li>
-                            <li class="mx-2 poppins-semibold selecionado"><a class="px-3 py-2" href="sobre.php">Sobre</a></li>
-                            <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="blog.php">Blog<i class="notificacao-blog fa-solid fa-circle fa-2xs" style="color: #f80808;"></i></a></li>
-                        </ul>
-                        <a class="btn btn-secondary mt-4 mb-2 py-2" href="#nav-principal"> <i class="fa-solid fa-circle-arrow-up fa-lg me-3"></i><span class="poppins-semibold">Voltar para o topo</span></a>
-                        <small class="poppins-regular cinza">@ <?php $ano = date("Y"); echo $ano; ?> Arthur Vieira - Todos os direitos reservados.</small>
+                        <a class="btn btn-primary mb-2 py-2" href="#nav-principal"> <i class="fa-solid fa-circle-arrow-up fa-lg me-3"></i><span class="poppins-semibold">Voltar para o topo</span></a>
+                        <small class="poppins-regular cinza">© <?php $ano = date("Y"); echo $ano; ?> Arthur Vieira - Todos os direitos reservados.</small>
                     </div>
                 </div>
             </footer>

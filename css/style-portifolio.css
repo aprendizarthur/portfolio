@@ -62,6 +62,14 @@
     }
 
 /*Main*/
+    #redes a{
+        color: #989796;
+    }
+
+    #redes a:hover{
+        color: #272727;
+    }
+
     .box-tecnologias{
         border-radius: 24px;
         background-color: #f0f0f0;
@@ -79,6 +87,10 @@
 
     }
 
+    .projeto p{
+        font-size: 1rem !important;
+    }
+
     .postagem-blog img{
         border-radius: 24px;
         width: 100%;
@@ -88,6 +100,10 @@
     .postagem-blog a{
         text-decoration: none;
         color: #272727;
+    }
+
+    .postagem-blog p{
+        font-size: 1rem !important;
     }
 
     #contato div{
@@ -127,6 +143,42 @@
         color: #FB0404;
     }
 
+    #projeto-pagina img{
+        border-radius: 24px;
+        width: 100%;
+        height: 25vh;
+    }
+
+    #projeto-pagina h2{
+        font-size: 1.6rem !important;
+    }
+
+    #projeto-pagina span{
+        font-size: 1.1rem !important;
+    }
+
+    #projeto-pagina a{
+        font-size: 1.1rem;
+    }
+
+    .sumario{
+        background-color: #f0f0f0;
+        border-radius: 24px;
+        width: 75%;
+    }
+
+    .sumario a:hover{
+        color: #007BFF;
+    }
+
+    details ul{
+        text-align: center;
+        background-color: #FFFFFF;
+        border-radius: 24px;
+        border: solid 1px #989796;
+        width: 95%;
+        margin: 0 auto;
+    }
 /*Footer*/
     footer{
         border-radius: 24px;
@@ -288,7 +340,7 @@
     }
 
     p{
-        font-size: 1rem !important;
+        font-size: 1.2rem !important;
     }
 
     blockquote{
@@ -309,11 +361,14 @@
         @media(max-width: 475px){
             .imagem-projeto{
                 margin-bottom: 10px;
+                width: 100% !important;
                 height: 25vh !important;
+                
             }
 
             .imagem-blog{
                 margin-bottom: 10px;
+                width: 100% !important;
                 height: 25vh !important;
             }
         }
@@ -322,10 +377,12 @@
     @media(min-width: 478px) and (max-width: 768px){
         .imagem-projeto{
             height: 25vh !important;
+            width: 100% !important;
         }
 
         .imagem-blog{
             height: 25vh !important;
+            width: 100% !important;
         }
     }
 
@@ -333,10 +390,12 @@
     @media(min-width: 1024px){
         .imagem-projeto{
             height: 22vh !important;
+            width: 100% !important;
         }
 
         .imagem-blog{
             height: 22vh !important;
+            width: 100% !important;
         }
     }
 
@@ -344,9 +403,11 @@
     @media(min-width: 2000px){
         .imagem-projeto{
             height: 15vh !important;
+            width: 100% !important;
         }
 
         .imagem-blog{
             height: 15vh !important;
+            width: 100% !important;
         }
     }

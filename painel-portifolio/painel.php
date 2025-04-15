@@ -61,13 +61,8 @@ encaminharDeslogado($mysqli);
             <footer>
                 <div class="row d-flex justify-content-center m-0">
                     <div class="col-12 col-md-6 text-center">
-                        <ul>
-                            <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="#conteudo">Conteúdo</a></li>
-                            <li class="mx-2 poppins-semibold selecionado"><a class="px-3 py-2" href="sobre.php">Painel</a></li>
-                            <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="logout.php">Logout</a></li>
-                        </ul>
-                        <a class="btn btn-secondary mt-4 mb-2 py-2" href="#nav-principal"> <i class="fa-solid fa-circle-arrow-up fa-lg me-3"></i><span class="poppins-semibold">Voltar para o topo</span></a>
-                        <small class="poppins-regular cinza">@ <?php $ano = date("Y"); echo $ano; ?> Arthur Vieira - Todos os direitos reservados.</small>
+                        <a class="btn btn-secondary mb-2 py-2" href="#nav-principal"> <i class="fa-solid fa-circle-arrow-up fa-lg me-3"></i><span class="poppins-semibold">Voltar para o topo</span></a>
+                        <small class="poppins-regular cinza">© <?php $ano = date("Y"); echo $ano; ?> Arthur Vieira - Todos os direitos reservados.</small>
                     </div>
                 </div>
             </footer>

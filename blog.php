@@ -55,7 +55,7 @@ session_start();
                     <div class="row d-flex justify-content-center text-center my-3">
                         <div class="col-11 col-md-6">
                             <h1 class="h1-cta inter-bold">Pesquise postagens</h1>
-                            <p class="p-cta inter-regular cinza">Pesquise por título ou conteúdo.</p>
+                            <p class="p-cta poppins-regular preto">Pesquise por título ou conteúdo.</p>
 
                             <form method="POST" id="form-pesquisa">
                                 <div class="form-group d-inline">
@@ -72,8 +72,9 @@ session_start();
                 <!--ABERTURA SECTION BLOG-->
                 <section id="blog">
                     <div class="row d-flex justify-content-center">
-                        <div class="col-11 col-md-10 my-3 text-center">
+                        <div class="col-11 col-md-10 mt-4 text-left">
                             <h1 class="inter-bold">Recentes</h1> 
+                            <hr>
                         </div>
 
                         <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
@@ -199,16 +200,147 @@ session_start();
                                 </div>
                             </article>
                         </div>
+                    </div>
+                </section>
+                <!--FECHAMENTO SECTION PROJETOS-->
 
-                        <div class="col-11 col-md-10 mt-2 text-left">
-                            <a href="" class="poppins-semibold" style="color: #989796;"><u>Ver mais</u></a>
+                <!--ABERTURA SECTION BLOG-->
+                <section id="blog">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-11 col-md-10 mt-4 text-left">
+                            <h1 class="inter-bold">Mais vistos</h1> 
+                            <hr>
+                        </div>
+
+                        <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
+                            <article class="postagem-blog">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-12 col-md-12 col-lg-5 d-flex justify-content-center align-items-center">
+                                        <a href="">
+                                            <img class="imagem-blog" src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/04/fernanda-torres-chat-gpt-e1743549030558.png" alt="Alt imagem">
+                                        </a>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-7">
+                                        <a href="">
+                                            <header>
+                                                <small class="poppins-regular cinza d-block mt-2 mb-1">Tendências</small>
+                                                <h2 class="inter-bold">IA gerando imagens</h2>    
+                                            </header>
+                                                
+                                            <p class="poppins-regular preto">
+                                                 Conteúdo gratuito de preparação para redação do ENEM. Teste limite de caracteres. 
+                                            </p>
+
+                                            <footer class="d-flex justify-content-between align-items-center">
+                                                <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                                <div>
+                                                    <a class="d-inline btn btn-primary mx-1 p-2" href=""><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
+                                                </div>
+                                            </footer>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
+                            <article class="postagem-blog">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-12 col-md-12 col-lg-5 d-flex justify-content-center align-items-center">
+                                        <a href="">
+                                            <img class="imagem-blog" src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/04/fernanda-torres-chat-gpt-e1743549030558.png" alt="Alt imagem">
+                                        </a>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-7">
+                                        <a href="">
+                                            <header>
+                                                <small class="poppins-regular cinza d-block mt-2 mb-1">Tendências</small>
+                                                <h2 class="inter-bold">IA gerando imagens</h2>    
+                                            </header>
+                                                
+                                            <p class="poppins-regular preto">
+                                                 Conteúdo gratuito de preparação para redação do ENEM. Teste limite de caracteres. 
+                                            </p>
+
+                                            <footer class="d-flex justify-content-between align-items-center">
+                                                <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                                <div>
+                                                    <a class="d-inline btn btn-primary mx-1 p-2" href=""><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
+                                                </div>
+                                            </footer>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
+                            <article class="postagem-blog">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-12 col-md-12 col-lg-5 d-flex justify-content-center align-items-center">
+                                        <a href="">
+                                            <img class="imagem-blog" src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/04/fernanda-torres-chat-gpt-e1743549030558.png" alt="Alt imagem">
+                                        </a>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-7">
+                                        <a href="">
+                                            <header>
+                                                <small class="poppins-regular cinza d-block mt-2 mb-1">Tendências</small>
+                                                <h2 class="inter-bold">IA gerando imagens</h2>    
+                                            </header>
+                                                
+                                            <p class="poppins-regular preto">
+                                                 Conteúdo gratuito de preparação para redação do ENEM. Teste limite de caracteres. 
+                                            </p>
+
+                                            <footer class="d-flex justify-content-between align-items-center">
+                                                <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                                <div>
+                                                    <a class="d-inline btn btn-primary mx-1 p-2" href=""><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
+                                                </div>
+                                            </footer>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
+                            <article class="postagem-blog">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-12 col-md-12 col-lg-5 d-flex justify-content-center align-items-center">
+                                        <a href="">
+                                            <img class="imagem-blog" src="https://m.media-amazon.com/images/I/31ijxnVwnJL._BO30,255,255,255_UF900,850_SR1910,1000,0,C_ZA44,500,900,420,420,AmazonEmber,50,4,0,0_PIRIOFIVE-medium,BottomLeft,30,-20_QL100_.jpg" alt="Alt imagem">
+                                        </a>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-7">
+                                        <a href="">
+                                            <header>
+                                                <small class="poppins-regular cinza d-block mt-2 mb-1">Tendências</small>
+                                                <h2 class="inter-bold">IA gerando imagens</h2>    
+                                            </header>
+                                                
+                                            <p class="poppins-regular preto">
+                                                 Conteúdo gratuito de preparação para redação do ENEM. Teste limite de caracteres. 
+                                            </p>
+
+                                            <footer class="d-flex justify-content-between align-items-center">
+                                                <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                                <div>
+                                                    <a class="d-inline btn btn-primary mx-1 p-2" href=""><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
+                                                </div>
+                                            </footer>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </section>
                 <!--FECHAMENTO SECTION PROJETOS-->
 
-                <!--ABERTURA SECTION CONTATO-->
-                <section id="contato">
+                 <!--ABERTURA SECTION CONTATO-->
+                 <section id="contato">
                         <div class="row d-flex justify-content-center align-items-center my-5">
                             <div class="col-11 col-md-10 bg-preto p-4 d-flex justify-content-center">
                                 <hgroup>
@@ -224,16 +356,11 @@ session_start();
         <!--FECHAMENTO MAIN-->
 
         <!--ABERTURA FOOTER-->
-        <footer>
-                <div class="row d-flex justify-content-center m-0">
+            <footer>
+                <div class="row d-flex justify-content-center mt-4">
                     <div class="col-12 col-md-6 text-center">
-                        <ul>
-                            <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="projetos.php">Projetos</a></li>
-                            <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="sobre.php">Sobre</a></li>
-                            <li class="mx-2 poppins-semibold selecionado"><a class="px-3 py-2" href="blog.php">Blog<i class="notificacao-blog fa-solid fa-circle fa-2xs" style="color: #f80808;"></i></a></li>
-                        </ul>
-                        <a class="btn btn-secondary mt-4 mb-2 py-2" href="#nav-principal"> <i class="fa-solid fa-circle-arrow-up fa-lg me-3"></i><span class="poppins-semibold">Voltar para o topo</span></a>
-                        <small class="poppins-regular cinza">@ <?php $ano = date("Y"); echo $ano; ?> Arthur Vieira - Todos os direitos reservados.</small>
+                        <a class="btn btn-primary mb-2 py-2" href="#nav-principal"> <i class="fa-solid fa-circle-arrow-up fa-lg me-3"></i><span class="poppins-semibold">Voltar para o topo</span></a>
+                        <small class="poppins-regular cinza">© <?php $ano = date("Y"); echo $ano; ?> Arthur Vieira - Todos os direitos reservados.</small>
                     </div>
                 </div>
             </footer>
