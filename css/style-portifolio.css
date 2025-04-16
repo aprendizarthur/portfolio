@@ -11,6 +11,10 @@
         display: block;
     }
 
+    select{
+        border-radius: 12px !important;
+    }
+
 /*Header*/
     header nav{
         background-color: #F7F6F5;
@@ -67,7 +71,7 @@
     }
 
     #redes a:hover{
-        color: #272727;
+        color: #FFFFFF;
     }
 
     .box-tecnologias{
@@ -111,26 +115,32 @@
     }
 
     form input{
-        border-radius: 24px !important;
-        border: solid 1px #989796 !important;
+        border-radius: 12px !important;
+        border: solid 1px #f0f0f0 !important;
     }
 
     #form-pesquisa input{
+        border: solid 1px #272727 !important;
         display: inline;
-        width: 75%
+        width: 70%
     }
 
     #form-pesquisa input:focus{
-        box-shadow: 0px 4px 0px 0px #272727;
+        box-shadow: 0px 2px 0px 0px #272727;
     }
 
     #form-pesquisa button{
-        width: 19%;
+        width: 10%;
         display: inline;
     }
 
     #form-pesquisa btn{
         width: auto;
+    }
+
+    .form-painel{
+        background-color: #f0f0f0 !important;
+        border-radius: 24px;
     }
 
     .box-form{
@@ -141,6 +151,15 @@
 
     .mensagem-erro{
         color: #FB0404;
+    }
+
+    .mensagem-sucesso{
+        color: #51af3f;
+    }
+
+    .projeto a{
+        text-decoration: none;
+        color: #272727;
     }
 
     #projeto-pagina img{
@@ -178,6 +197,23 @@
         border: solid 1px #989796;
         width: 95%;
         margin: 0 auto;
+    }
+
+    #categorias a:hover{
+        color: #FFFFFF;
+    }
+
+    #adicionar-conteudo{
+        height: 100vh;
+    }
+
+    #excluir-conteudo{
+        overflow-y: auto;
+        height: 100vh;
+    }
+
+    .table{
+        border-radius: 24px !important;
     }
 /*Footer*/
     footer{
@@ -278,6 +314,36 @@
         border-radius: 24px !important;
     }
 
+    .btn-primary-cta{
+        background-color: #FFFFFF !important;
+        border: solid 1px #272727 !important;
+        color: #272727 !important;  
+        border-radius: 24px !important;
+        width: 100%;
+    }
+
+    .btn-primary-cta:hover{
+        background-color: #272727 !important;
+        border: solid 1px #989796!important;
+        color: #989796 !important;  
+        border-radius: 24px !important;
+    }
+
+    .btn-secondary-cta{
+        background-color: #272727 !important;
+        border: solid 1px #FFFFFF!important;
+        color: #FFFFFF !important;  
+        border-radius: 24px !important;
+        width: 100%;
+    }
+
+    .btn-secondary-cta:hover{
+        background-color: #272727!important;
+        border: solid 1px #989796 !important;
+        color: #989796 !important;  
+        border-radius: 24px !important;
+    }
+
 /*Fontes*/
     .inter-regular {
         font-family: "Inter", sans-serif;
@@ -324,7 +390,7 @@
     }  
     
     .p-cta{
-        font-size: 1.3rem !important;
+        font-size: 1.2rem !important;
     }
 
     h1{
@@ -370,6 +436,11 @@
                 margin-bottom: 10px;
                 width: 100% !important;
                 height: 25vh !important;
+            }
+
+            #form-pesquisa button{
+                width: 20%;
+                display: inline;
             }
         }
 

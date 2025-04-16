@@ -54,6 +54,7 @@ include 'conn.php';
     function encaminharLogado($mysqli){
         if(!empty($_SESSION['usuario'])){
             header("Location: painel.php");
+            exit();
         }
     }
 
@@ -61,6 +62,7 @@ include 'conn.php';
     function encaminharDeslogado($mysqli){
         if(empty($_SESSION['usuario'])){
             header("Location: ../sobre.php");
+            exit();
         }
     }
 ?>
