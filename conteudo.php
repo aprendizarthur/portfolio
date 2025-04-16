@@ -3,6 +3,8 @@ session_start();
 include 'functions/conteudo.php';
 //função que insere meta title e meta description no conteúdo de acordo com o id
 $conteudo_meta = inserirMETA($mysqli);
+//função que adiciona uma visualização ao conteudo
+adicionarVisualização($mysqli);
 ?>
 
 <!DOCTYPE html>

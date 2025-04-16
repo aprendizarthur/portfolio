@@ -39,6 +39,8 @@ function pesquisaProjetos($mysqli) {
 
                 if ($query = $mysqli->query($sql_code)) {
                     while ($dados = $query->fetch_assoc()) {
+                        $IDconteudo = $dados['id'];
+                        $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                         echo '
                             <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                                 <article class="projeto">
@@ -59,14 +61,13 @@ function pesquisaProjetos($mysqli) {
                                                 </p>
                                             </a>
                                             <footer class="d-flex justify-content-between align-items-center">
-                                                <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                                <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                                 <div>
-                                                    <a class="d-inline btn btn-secondary mx-1 p-2" href="' . $dados['link1'] . '"><i class="fa-brands fa-github fa-xl"></i></a>
+                                                    <a class="d-inline btn btn-secondary mx-1 p-2" href="' .$dados['link1']. '"><i class="fa-brands fa-github fa-xl"></i></a>
                                                     <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id=' . $dados['id'] . '"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
                                                 </div>
                                             </footer>
                                         </div>
-oot.html
                                     </div>
                                 </article>
                             </div>
@@ -94,6 +95,8 @@ oot.html
 
         if ($query = $mysqli->query($sql_code)) {
             while ($dados = $query->fetch_assoc()) {
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                 echo '
                     <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                         <article class="projeto">
@@ -114,7 +117,7 @@ oot.html
                                         </p>
                                     </a>
                                     <footer class="d-flex justify-content-between align-items-center">
-                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                         <div>
                                             <a class="d-inline btn btn-secondary mx-1 p-2" href="' . $dados['link1'] . '"><i class="fa-brands fa-github fa-xl"></i></a>
                                             <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id=' . $dados['id'] . '"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
@@ -162,6 +165,8 @@ oot.html
 
         if ($query = $mysqli->query($sql_code)) {
             while ($dados = $query->fetch_assoc()) {
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                 echo '
                     <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                         <article class="projeto">
@@ -182,7 +187,7 @@ oot.html
                                         </p>
                                     </a>
                                     <footer class="d-flex justify-content-between align-items-center">
-                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                         <div>
                                             <a class="d-inline btn btn-secondary mx-1 p-2" href="' . $dados['link1'] . '"><i class="fa-brands fa-github fa-xl"></i></a>
                                             <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id=' . $dados['id'] . '"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
@@ -217,6 +222,8 @@ oot.html
 
         if ($query = $mysqli->query($sql_code)) {
             while ($dados = $query->fetch_assoc()) {
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                 echo '
                     <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                         <article class="projeto">
@@ -237,7 +244,7 @@ oot.html
                                         </p>
                                     </a>
                                     <footer class="d-flex justify-content-between align-items-center">
-                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                         <div>
                                             <a class="d-inline btn btn-secondary mx-1 p-2" href="' . $dados['link1'] . '"><i class="fa-brands fa-github fa-xl"></i></a>
                                             <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id=' . $dados['id'] . '"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
@@ -272,6 +279,8 @@ oot.html
 
         if ($query = $mysqli->query($sql_code)) {
             while ($dados = $query->fetch_assoc()) {
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                 echo '
                     <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                         <article class="projeto">
@@ -292,7 +301,7 @@ oot.html
                                         </p>
                                     </a>
                                     <footer class="d-flex justify-content-between align-items-center">
-                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                         <div>
                                             <a class="d-inline btn btn-secondary mx-1 p-2" href="' . $dados['link1'] . '"><i class="fa-brands fa-github fa-xl"></i></a>
                                             <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id=' . $dados['id'] . '"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
@@ -352,6 +361,8 @@ function pesquisaPostagens($mysqli) {
 
                 if ($query = $mysqli->query($sql_code)) {
                     while ($dados = $query->fetch_assoc()) {
+                        $IDconteudo = $dados['id'];
+                        $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                         echo '
                             <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                                 <article class="projeto">
@@ -372,7 +383,7 @@ function pesquisaPostagens($mysqli) {
                                                 </p>
                                             </a>
                                             <footer class="d-flex justify-content-between align-items-center">
-                                                <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                                <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                                 <div>
                                                     <a class="d-inline btn btn-secondary mx-1 p-2" href="' . $dados['link1'] . '"><i class="fa-brands fa-github fa-xl"></i></a>
                                                     <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id=' . $dados['id'] . '"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
@@ -406,6 +417,8 @@ function pesquisaPostagens($mysqli) {
 
         if ($query = $mysqli->query($sql_code)) {
             while ($dados = $query->fetch_assoc()) {
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                 echo '
                     <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                         <article class="projeto">
@@ -426,7 +439,7 @@ function pesquisaPostagens($mysqli) {
                                         </p>
                                     </a>
                                     <footer class="d-flex justify-content-between align-items-center">
-                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                         <div>
                                             <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id=' . $dados['id'] . '"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
                                         </div>
@@ -473,6 +486,8 @@ function pesquisaPostagens($mysqli) {
 
         if ($query = $mysqli->query($sql_code)) {
             while ($dados = $query->fetch_assoc()) {
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                 echo '
                     <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                         <article class="projeto">
@@ -493,7 +508,7 @@ function pesquisaPostagens($mysqli) {
                                         </p>
                                     </a>
                                     <footer class="d-flex justify-content-between align-items-center">
-                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                         <div>
                                             <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id=' . $dados['id'] . '"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
                                         </div>
@@ -527,6 +542,8 @@ function pesquisaPostagens($mysqli) {
 
         if ($query = $mysqli->query($sql_code)) {
             while ($dados = $query->fetch_assoc()) {
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                 echo '
                     <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                         <article class="projeto">
@@ -547,7 +564,7 @@ function pesquisaPostagens($mysqli) {
                                         </p>
                                     </a>
                                     <footer class="d-flex justify-content-between align-items-center">
-                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                         <div>
                                             <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id=' . $dados['id'] . '"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
                                         </div>
@@ -581,6 +598,8 @@ function pesquisaPostagens($mysqli) {
 
         if ($query = $mysqli->query($sql_code)) {
             while ($dados = $query->fetch_assoc()) {
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                 echo '
                     <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                         <article class="projeto">
@@ -601,7 +620,7 @@ function pesquisaPostagens($mysqli) {
                                         </p>
                                     </a>
                                     <footer class="d-flex justify-content-between align-items-center">
-                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                         <div>
                                             <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id=' . $dados['id'] . '"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
                                         </div>
@@ -635,6 +654,8 @@ function pesquisaPostagens($mysqli) {
 
         if ($query = $mysqli->query($sql_code)) {
             while ($dados = $query->fetch_assoc()) {
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                 echo '
                     <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                         <article class="projeto">
@@ -655,7 +676,7 @@ function pesquisaPostagens($mysqli) {
                                         </p>
                                     </a>
                                     <footer class="d-flex justify-content-between align-items-center">
-                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                         <div>
                                             <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id=' . $dados['id'] . '"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
                                         </div>

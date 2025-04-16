@@ -61,7 +61,6 @@ adicionaConteudo($mysqli);
                     <div class="row d-flex my-5 justify-content-center">
                         <div class="col-11 col-md-10 text-center">
                             <h1 class="inter-bold mb-4">Conteúdo</h1>
-                            <?php echo $_SESSION['usuario']; ?>
                         </div>
                         <div class="col-11 col-md-5 p-4 m-2 form-painel">
                             <h1 class="inter-bold">Adicionar</h1>

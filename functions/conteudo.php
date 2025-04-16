@@ -1,6 +1,33 @@
 <?php
 include 'conn.php'; 
-//arquivo exclusivo para lidar com conteúdo (projetos e postagens do blog)
+//arquivo exclusivo para lidar com conteúdo (projetos/postagens do blog)
+    //FUNÇÃO QUE ADICIONA VISUALIZAÇÃO AO CONTEUDO
+    function adicionarVisualização($mysqli){
+        $id = $mysqli->real_escape_string($_GET['id']);
+
+        verificarIDconteudo($mysqli, $id);
+
+        $sql_code = "INSERT INTO visualizacoes (id_visualizado) VALUES ('$id')";
+
+        $mysqli->query($sql_code);
+    }
+
+    //FUNÇÃO QUE CONTA O TOTAL DE VISUALIZAÇÕES DO CONTEUDO
+    function totalVisualizacoes($mysqli, $IDconteudo){
+        if(!empty($_GET['id'])){
+            $id = $mysqli->real_escape_string($_GET['id']);
+        } else {
+            $id = $IDconteudo;
+        }
+
+        $sql_code = "SELECT COUNT(*) AS total FROM visualizacoes WHERE id_visualizado = '$id'";
+
+        $query = $mysqli->query($sql_code);
+        $dados = $query->fetch_assoc();
+
+        return $dados['total'];
+    }
+    
 
     //FUNÇÃO QUE EXCLUI CONTEÚDO
     function tabelaConteudo($mysqli){
@@ -201,6 +228,8 @@ include 'conn.php';
 
         if($query = $mysqli->query($sql_code)){
             while($dados = $query->fetch_assoc()){
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                 echo '
                     <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                         <article class="projeto">
@@ -222,7 +251,7 @@ include 'conn.php';
                                         </p>
                                     </a>
                                     <footer class="d-flex justify-content-between align-items-center">
-                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                         <div>
                                             <a class="d-inline btn btn-secondary mx-1 p-2" href="'.$dados['link1'].'"><i class="fa-brands fa-github fa-xl"></i></a>
                                             <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id='.$dados['id'].'"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
@@ -260,6 +289,8 @@ include 'conn.php';
     
             if($query = $mysqli->query($sql_code)){
                 while($dados = $query->fetch_assoc()){
+                    $IDconteudo = $dados['id'];
+                    $totalVisualizacoes = totalVisualizacoes($mysqli, $IDconteudo);
                     echo '
                         <div class="col-11 col-md-5 col-lg-5 m-2 p-3 box-projetos">
                             <article class="projeto">
@@ -281,7 +312,7 @@ include 'conn.php';
                                             </p>
                                         </a>
                                         <footer class="d-flex justify-content-between align-items-center">
-                                            <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
+                                            <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
                                             <div>
                                                 <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id='.$dados['id'].'"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
                                             </div>
