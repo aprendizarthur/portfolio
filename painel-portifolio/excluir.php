@@ -14,6 +14,12 @@ if($query = $mysqli->query($sql_code)){
     $dados = $query->fetch_assoc();
 
     if($dados['total'] != 0){
+        $sql_code ="DELETE FROM visualizacoes WHERE id_visualizado = '$id'";
+
+        if($query = $mysqli->query($sql_code)){
+            
+        }
+
         $sql_code = "DELETE FROM conteudo WHERE id = '$id' ";
 
         if($query = $mysqli->query($sql_code)){

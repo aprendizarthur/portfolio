@@ -1,13 +1,51 @@
 <?php
 include 'conn.php'; 
 //arquivo exclusivo para lidar com conteúdo (projetos/postagens do blog)
+
+    //FUNÇÕES QUE COLETAM DADOS DO PORTIFÓLIO
+
+        function totalVISUProjetos($mysqli){
+            $sql_code = "SELECT COUNT(*) AS total FROM visualizacoes WHERE tipo = 'projeto'";
+
+            $query = $mysqli->query($sql_code);
+            $dados = $query->fetch_assoc();
+            
+            return $dados['total'];
+        }
+
+        function totalVISUPostagens($mysqli){
+            $sql_code = "SELECT COUNT(*) AS total FROM visualizacoes WHERE tipo = 'postagens'";
+
+            $query = $mysqli->query($sql_code);
+            $dados = $query->fetch_assoc();
+            
+            return $dados['total'];
+        }
+
+        function totalVISUGeral($mysqli){
+            $sql_code = "SELECT COUNT(*) AS total FROM visualizacoes";
+
+            $query = $mysqli->query($sql_code);
+            $dados = $query->fetch_assoc();
+            
+            return $dados['total'];
+        }
+
     //FUNÇÃO QUE ADICIONA VISUALIZAÇÃO AO CONTEUDO
     function adicionarVisualização($mysqli){
         $id = $mysqli->real_escape_string($_GET['id']);
 
+        $sql_code = "SELECT tipo FROM conteudo WHERE id = '$id'";
+
+        if($query = $mysqli->query($sql_code)){
+            $dados = $query->fetch_assoc();
+
+            $tipo = $dados['tipo'];
+        }
+
         verificarIDconteudo($mysqli, $id);
 
-        $sql_code = "INSERT INTO visualizacoes (id_visualizado) VALUES ('$id')";
+        $sql_code = "INSERT INTO visualizacoes (id_visualizado, tipo) VALUES ('$id', '$tipo')";
 
         $mysqli->query($sql_code);
     }
@@ -266,7 +304,7 @@ include 'conn.php';
 
             echo '
                     <div class="col-11 col-md-10 mt-2 text-left">
-                        <a href="projetos.php" class="poppins-semibold" style="color: #989796;"><u>Ver mais '.totalProjetos($mysqli).'</u></a>
+                        <a href="projetos.php" class="poppins-semibold" style="color: #989796;"><u>Ver mais ('.totalProjetos($mysqli).')</u></a>
                     </div>
                 </div>
             </section>
@@ -326,7 +364,7 @@ include 'conn.php';
     
                 echo '
                         <div class="col-11 col-md-10 mt-2 text-left">
-                            <a href="blog.php" class="poppins-semibold" style="color: #989796;"><u>Ver mais '.totalPostagens($mysqli).'</u></a>
+                            <a href="blog.php" class="poppins-semibold" style="color: #989796;"><u>Ver mais ('.totalPostagens($mysqli).')</u></a>
                         </div>
                     </div>
                 </section>
@@ -342,7 +380,7 @@ include 'conn.php';
                 $dados = $query->fetch_assoc();
                 $total = $dados['total'];
 
-                return "($total)";
+                return "$total";
             } else {
                 return "";
             }
@@ -356,7 +394,7 @@ include 'conn.php';
                 $dados = $query->fetch_assoc();
                 $total = $dados['total'];
 
-                return "($total)";
+                return "$total";
             } else {
                 return "";
             }

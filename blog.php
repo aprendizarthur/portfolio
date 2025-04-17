@@ -85,7 +85,7 @@ include 'functions/pesquisa.php';
                                 <hgroup>
                                     <h1 class="inter-bold branco">Tem algum projeto em mente?</h1>
                                     <h2 class="poppins-semibold cinza">Entre em contato comigo.</h2>
-                                    <a class="mt-2 py-2 btn btn-tertiary" href=""><span class="poppins-semibold">Contato</span></a>    
+                                    <a class="mt-2 py-2 btn btn-tertiary" href="contato.php"><span class="poppins-semibold">Contato</span></a>    
                                 </hgroup>
                             </div>
                         </div>

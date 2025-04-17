@@ -56,6 +56,50 @@ adicionaConteudo($mysqli);
 
         <!--ABERTURA MAIN-->
             <main>
+                <!--ABERTURA SECTION DADOS-->
+                <section id="DADOS">
+                    <div class="row d-flex justify-content-center text-center my-3">
+                        <div class="col-11 col-md-12 col-lg-10 p-4 text-center bg-preto" style="border-radius: 24px;">
+                            <h1 class="h1-cta inter-bold text-light mb-4">Dados</h1>
+
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-12 col-md-5 text-light m-2 bg-light p-3" style="border-radius: 24px">
+                                    <h2 class="inter-bold preto">Projetos</h2>
+
+                                    <table class="table poppins-regular">
+                                        <tr>
+                                            <th>Quantidade</th>
+                                            <th>Views</th>
+                                            <th>Média V/Q</th>
+                                        </tr>
+                                        <tr>
+                                            <td><?php echo totalProjetos($mysqli);?></td>
+                                            <td><?php echo totalVISUProjetos($mysqli);?></td>
+                                            <td><?php $views = intval(totalVISUProjetos($mysqli)); $total = intval(totalProjetos($mysqli)); if($views == 0 || $total == 0){ echo 0;} else { echo ($views/$total);};?></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-md-5 text-light m-2 bg-light p-3" style="border-radius: 24px">
+                                    <h2 class="inter-bold preto">Postagens</h2>
+                                    <table class="table poppins-regular">
+                                        <tr>
+                                            <th class="p-2">Quantidade</th>
+                                            <th class="p-2">Views</th>
+                                            <th class="p-2">Média V/Q</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-2"><?php echo totalPostagens($mysqli);?></td>
+                                            <td class="p-2"><?php echo totalVISUPostagens($mysqli);?></td>
+                                            <td class="p-2"><?php $views = intval(totalVISUPostagens($mysqli)); $total = intval(totalPostagens($mysqli)); if($views == 0 || $total == 0){ echo 0;} else { echo ($views/$total);};?></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--FECHAMENTO SECTION DADOS--> 
+
                 <!--ABERTURA SECTION GERENCIAR CONTEUDO-->
                 <section id="gerencia-conteudo">
                     <div class="row d-flex my-5 justify-content-center">
