@@ -1,6 +1,7 @@
 <?php 
 session_start();
 include 'functions/conteudo.php';
+include 'functions/sessions.php';
 //função que insere meta title e meta description no conteúdo de acordo com o id
 $conteudo_meta = inserirMETA($mysqli);
 //função que adiciona uma visualização ao conteudo
@@ -42,6 +43,7 @@ adicionarVisualização($mysqli);
                         <section id="nav-principal" class="mx-auto">
                             <nav>
                                 <ul>
+                                    <?php atalhoPainel(); ?>
                                     <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="sobre.php">Arthur</a></li>
                                     <li class="mx-2 poppins-semibold selecionado"><a class="px-3 py-2" href="#">Conteúdo</a></li>
                                     <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="blog.php">Blog<i class="notificacao-blog fa-solid fa-circle fa-2xs" style="color: #f80808;"></i></a></li>
@@ -58,78 +60,8 @@ adicionarVisualização($mysqli);
                 <!--FUNÇÃO PHP QUE INJETA O CONTEÚDO DO PROJETO-->
                 <?php exibirConteudo($mysqli);?>
 
-                <!--ABERTURA SECTION PROJETOS-->
-                <section id="projetos">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-11 col-md-7 mb-3 text-left">
-                            <h1 class="inter-bold" style="font-size: 1.6rem !important;">Outros projetos</h1> 
-                        </div>
-
-                        <div class="col-11 col-md-7 col-lg-7 m-2 p-3 box-projetos">
-                            <article class="projeto">
-                                <div class="row d-flex justify-content-between">
-                                    <div class="col-12 col-md-12 col-lg-5 d-flex justify-content-center align-items-center">
-                                        <a href="">
-                                            <img class="imagem-projeto" src="https://i0.wp.com/assets.b9.com.br/wp-content/uploads/2021/05/nubankb9.jpg?fit=1280%2C720&ssl=1" alt="Alt imagem">
-                                        </a>
-                                    </div>
-                                    <div class="col-12 col-md-12 col-lg-7">
-                                        <header>
-                                            <small class="poppins-regular cinza d-block mt-2 mb-1">Projeto extensão faculdade</small>
-                                            <h2 class="inter-bold">Redamil</h2>    
-                                        </header>
-                                        
-                                        <p class="poppins-regular preto">
-                                            Conteúdo gratuito de preparação para redação do ENEM. Teste limite de caracteres. 
-                                        </p>
-
-                                        <footer class="d-flex justify-content-between align-items-center">
-                                            <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
-                                            <div>
-                                                <a class="d-inline btn btn-secondary mx-1 p-2" href=""><i class="fa-brands fa-github fa-xl"></i></a>
-                                                <a class="d-inline btn btn-primary mx-1 p-2" href=""><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
-                                            </div>
-                                        </footer>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="col-11 col-md-7 col-lg-7 m-2 p-3 box-projetos">
-                            <article class="projeto">
-                                <div class="row d-flex justify-content-between">
-                                    <div class="col-12 col-md-12 col-lg-5 d-flex justify-content-center align-items-center">
-                                        <a href="">
-                                            <img class="imagem-projeto" src="https://i0.wp.com/assets.b9.com.br/wp-content/uploads/2021/05/nubankb9.jpg?fit=1280%2C720&ssl=1" alt="Alt imagem">
-                                        </a>
-                                    </div>
-                                    <div class="col-12 col-md-12 col-lg-7">
-                                        <header>
-                                            <small class="poppins-regular cinza d-block mt-2 mb-1">Projeto extensão faculdade</small>
-                                            <h2 class="inter-bold">Redamil</h2>    
-                                        </header>
-                                        
-                                        <p class="poppins-regular preto">
-                                            Conteúdo gratuito de preparação para redação do ENEM. Teste limite de caracteres. 
-                                        </p>
-
-                                        <footer class="d-flex justify-content-between align-items-center">
-                                            <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">1.290</small></div>
-                                            <div>
-                                                <a class="d-inline btn btn-secondary mx-1 p-2" href=""><i class="fa-brands fa-github fa-xl"></i></a>
-                                                <a class="d-inline btn btn-primary mx-1 p-2" href=""><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
-                                            </div>
-                                        </footer>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="col-11 col-md-7 mt-2 text-left">
-                            <a href="projetos.php" class="poppins-semibold" style="color: #989796;"><u>Ver mais</u></a>
-                        </div>
-                    </div>
-                </section>
+                <!--FUNÇÃO PHP QUE INJETA RECOMENDAÇÕES DE CONTEÚDO-->
+                <?php conteudoRecomendado($mysqli)?>
             </main>
         <!--FECHAMENTO MAIN-->
 

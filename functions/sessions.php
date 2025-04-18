@@ -65,4 +65,13 @@ include 'conn.php';
             exit();
         }
     }
+
+    //FUNÇÃO QUE EXIBE ATALHO PARA PAINEL NO SOBRE SE O USUÁRIO ESTIVER LOGADO
+    function atalhoPainel(){
+        if(isset($_SESSION['usuario'])){
+            echo '
+                <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="painel-portifolio/painel.php">Painel</a></li>
+            ';
+        }
+    }
 ?>

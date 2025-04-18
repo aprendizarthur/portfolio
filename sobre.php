@@ -1,6 +1,7 @@
 <?php 
 session_start();
 include 'functions/conteudo.php';
+include 'functions/sessions.php';
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +39,7 @@ include 'functions/conteudo.php';
                         <section id="nav-principal" class="mx-auto">
                             <nav>
                                 <ul>
+                                    <?php atalhoPainel(); ?>
                                     <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="projetos.php">Projetos</a></li>
                                     <li class="mx-2 poppins-semibold selecionado"><a class="px-3 py-2" href="sobre.php">Sobre</a></li>
                                     <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="blog.php">Blog<i class="notificacao-blog fa-solid fa-circle fa-2xs" style="color: #f80808;"></i></a></li>

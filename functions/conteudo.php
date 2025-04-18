@@ -2,8 +2,137 @@
 include 'conn.php'; 
 //arquivo exclusivo para lidar com conteúdo (projetos/postagens do blog)
 
-    //FUNÇÕES QUE COLETAM DADOS DO PORTIFÓLIO
+    //FUNÇÃO QUE EXIBE DOIS CONTEUDOS RECOMENDADOS NA PÁGINA DE UM CONTEÚDO
+    function conteudoRecomendado($mysqli){
+        $id = $mysqli->real_escape_string($_GET['id']);
 
+        $aleatorio1 = 0;
+        $aleatorio2 = 0;
+
+        $sql_code = "SELECT id FROM conteudo ORDER BY id ASC LIMIT 1";
+
+        if($query = $mysqli->query($sql_code)){
+            $dados = $query->fetch_assoc();
+            $primeiroIndice = $dados['id'];
+        }
+
+        $sql_code = "SELECT id FROM conteudo ORDER BY id DESC LIMIT 1";
+
+        if($query = $mysqli->query($sql_code)){
+            $dados = $query->fetch_assoc();
+            $ultimoIndice = $dados['id'];
+        }
+
+        do{$aleatorio1 = rand($primeiroIndice, $ultimoIndice);
+        }while($aleatorio1 == $id);
+
+
+
+        do{$aleatorio2 = rand($primeiroIndice, $ultimoIndice);
+        }while($aleatorio2 == $id || $aleatorio2 == $aleatorio1);
+
+        echo $id;
+        echo $aleatorio1;
+        echo $aleatorio2;
+
+        echo '
+            <section id="recomendado">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-11 col-md-7 mt-4 text-left">
+                        <h1 class="inter-bold">Recomendado</h1>
+                        <hr> 
+                    </div>
+        ';
+
+        $sql_code = "SELECT * FROM conteudo WHERE id = '$aleatorio1'";
+
+        if($query = $mysqli->query($sql_code)){
+            while($dados = $query->fetch_assoc()){
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoesRECOMENDADO($mysqli, $IDconteudo);
+                echo '
+                    <div class="col-11 col-md-7 col-lg-7 m-2 p-3 box-projetos">
+                        <article class="projeto">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-12 col-md-12 col-lg-5 d-flex justify-content-center align-items-center">
+                                    <a href="conteudo.php?id='.$dados['id'].'">
+                                        <img class="imagem-projeto" src="'.$dados['capa'].'" alt="Alt imagem">
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md-12 col-lg-7">
+                                    <header>
+                                        <small class="poppins-regular cinza d-block mt-2 mb-1">'.$dados['categoria'].'</small>
+                                        <h2 class="inter-bold">'.$dados['titulo'].'</h2>    
+                                    </header>
+                                    
+                                    <a href="conteudo.php?id='.$dados['id'].'">
+                                        <p class="poppins-regular preto">
+                                            '.$dados['descricao'].' 
+                                        </p>
+                                    </a>
+                                    <footer class="d-flex justify-content-between align-items-center">
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
+                                        <div>
+                                            <a class="d-inline btn btn-secondary mx-1 p-2" href="'.$dados['link1'].'"><i class="fa-brands fa-github fa-xl"></i></a>
+                                            <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id='.$dados['id'].'"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                ';
+            }
+        }
+
+        $sql_code = "SELECT * FROM conteudo WHERE id = '$aleatorio2'";
+
+        if($query = $mysqli->query($sql_code)){
+            while($dados = $query->fetch_assoc()){
+                $IDconteudo = $dados['id'];
+                $totalVisualizacoes = totalVisualizacoesRECOMENDADO($mysqli, $IDconteudo);
+                echo '
+                    <div class="col-11 col-md-7 col-lg-7 m-2 p-3 box-projetos">
+                        <article class="projeto">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-12 col-md-12 col-lg-5 d-flex justify-content-center align-items-center">
+                                    <a href="conteudo.php?id='.$dados['id'].'">
+                                        <img class="imagem-projeto" src="'.$dados['capa'].'" alt="Alt imagem">
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md-12 col-lg-7">
+                                    <header>
+                                        <small class="poppins-regular cinza d-block mt-2 mb-1">'.$dados['categoria'].'</small>
+                                        <h2 class="inter-bold">'.$dados['titulo'].'</h2>    
+                                    </header>
+                                    
+                                    <a href="conteudo.php?id='.$dados['id'].'">
+                                        <p class="poppins-regular preto">
+                                            '.$dados['descricao'].' 
+                                        </p>
+                                    </a>
+                                    <footer class="d-flex justify-content-between align-items-center">
+                                        <div><i class="fa-solid fa-eye fa-sm me-1" style="color: #989796;"></i><small class="poppins-regular cinza">'.$totalVisualizacoes.'</small></div>
+                                        <div>
+                                            <a class="d-inline btn btn-secondary mx-1 p-2" href="'.$dados['link1'].'"><i class="fa-brands fa-github fa-xl"></i></a>
+                                            <a class="d-inline btn btn-primary mx-1 p-2" href="conteudo.php?id='.$dados['id'].'"><i class="fa-solid fa-circle-arrow-right fa-lg"></i></a>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                ';
+            }
+        }
+
+        echo '
+                </div>
+            </section>
+        ';
+    }
+
+    //FUNÇÕES QUE COLETAM DADOS DO PORTIFÓLIO
         function totalVISUProjetos($mysqli){
             $sql_code = "SELECT COUNT(*) AS total FROM visualizacoes WHERE tipo = 'projeto'";
 
@@ -50,7 +179,7 @@ include 'conn.php';
         $mysqli->query($sql_code);
     }
 
-    //FUNÇÃO QUE CONTA O TOTAL DE VISUALIZAÇÕES DO CONTEUDO
+    //FUNÇÃO QUE CONTA O TOTAL DE VISUALIZAÇÕES DO CONTEUDO FORA DA PÁGINA CONTEUDO.PHP
     function totalVisualizacoes($mysqli, $IDconteudo){
         if(!empty($_GET['id'])){
             $id = $mysqli->real_escape_string($_GET['id']);
@@ -65,7 +194,15 @@ include 'conn.php';
 
         return $dados['total'];
     }
-    
+
+    function totalVisualizacoesRECOMENDADO($mysqli, $IDconteudo){
+        $sql_code = "SELECT COUNT(*) AS total FROM visualizacoes WHERE id_visualizado = '$IDconteudo'";
+
+        $query = $mysqli->query($sql_code);
+        $dados = $query->fetch_assoc();
+
+        return $dados['total'];
+    }
 
     //FUNÇÃO QUE EXCLUI CONTEÚDO
     function tabelaConteudo($mysqli){
