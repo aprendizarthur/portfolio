@@ -25,7 +25,7 @@
   <li>Figma (prototipagem)</li>
   <li>HTML</li>
   <li>CSS</li>
-  <li>Bootstrap 4</li>
+  <li>Bootstrap 5</li>
   <li>PHP</li>
   <li>MySQL</li>
   <li>SQL</li>
@@ -58,11 +58,11 @@
 </div>
 
 <div align="center">
-  <img src="images/assets/dados.png" style="border-radius: 20px; max-width: 80%; height: auto;">
+  <img src="images/assets/dados.jpg" style="border-radius: 20px; max-width: 80%; height: auto;">
 </div>
 
 <div align="center">
-  <img src="images/assets/adicionar.png" style="border-radius: 20px; max-width: 80%; height: auto;">
+  <img src="images/assets/adicionar.jpg" style="border-radius: 20px; max-width: 80%; height: auto;">
 </div>
 
 <div align="center" style="margin-top: 20px; margin-bottom: 20px;">
@@ -70,11 +70,11 @@
 </div>
 
 <div align="center">
-  <img src="images/assets/projetos.png" style="border-radius: 20px; height: auto;">
+  <img src="images/assets/projetos.jpg" style="border-radius: 20px; height: auto;">
 </div>
 
 <div align="center">
-  <img src="images/assets/postagens.png" style="border-radius: 20px; height: auto;">
+  <img src="images/assets/postagens.jpg" style="border-radius: 20px; height: auto;">
 </div>
 
 <div align="center" style="margin-top: 20px; margin-bottom: 20px;">
@@ -82,7 +82,7 @@
 </div>
 
 <div align="center">
-  <img src="images/assets/conteudo.png" style="border-radius: 20px; max-width: 80%; height: auto;">
+  <img src="images/assets/conteudo.jpg" style="border-radius: 20px; max-width: 80%; height: auto;">
 </div>
 
 
