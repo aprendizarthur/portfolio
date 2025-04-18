@@ -26,14 +26,8 @@ include 'conn.php';
         do{$aleatorio1 = rand($primeiroIndice, $ultimoIndice);
         }while($aleatorio1 == $id);
 
-
-
         do{$aleatorio2 = rand($primeiroIndice, $ultimoIndice);
         }while($aleatorio2 == $id || $aleatorio2 == $aleatorio1);
-
-        echo $id;
-        echo $aleatorio1;
-        echo $aleatorio2;
 
         echo '
             <section id="recomendado">
@@ -143,7 +137,7 @@ include 'conn.php';
         }
 
         function totalVISUPostagens($mysqli){
-            $sql_code = "SELECT COUNT(*) AS total FROM visualizacoes WHERE tipo = 'postagens'";
+            $sql_code = "SELECT COUNT(*) AS total FROM visualizacoes WHERE tipo = 'postagem'";
 
             $query = $mysqli->query($sql_code);
             $dados = $query->fetch_assoc();
@@ -246,6 +240,10 @@ include 'conn.php';
             $link = $_POST['link'];
             $conteudo = $mysqli->real_escape_string($_POST['conteudo']);
             
+            $_SESSION['input-conteudo'] = $conteudo;
+            $_SESSION['input-link'] = $link;
+            $_SESSION['input-capa'] = $capa;
+
             $verificacao0 = verificaTipo($tipo);
             $verificacao1 = verificaCategoria($categoria);
             $verificacao2 = verificaTitulo($titulo);
@@ -258,7 +256,6 @@ include 'conn.php';
                 
                 if($query = $mysqli->query($sql_code)){
                     $_SESSION['sucesso-conteudo'] = "Conteúdo adicionado";
-
                     $_SESSION['erro-tipo'] = "";
                     $_SESSION['erro-categoria'] = "";
                     $_SESSION['input-titulo'] = "";
@@ -269,6 +266,9 @@ include 'conn.php';
                     $_SESSION['erro-metatitle'] = "";
                     $_SESSION['input-metadescription'] = "";
                     $_SESSION['erro-metadescription'] = "";
+                    $_SESSION['input-conteudo'] = "";
+                    $_SESSION['input-link'] = "";
+                    $_SESSION['input-capa'] = "";
                 }else{
                     header("Location: paginas-erro/erro-conexao.php");
                     exit();

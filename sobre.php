@@ -69,9 +69,9 @@ include 'functions/sessions.php';
                                 <div class="col-12 col-md-12 mt-4">
                                     <section id="redes">
                                         <a href=""><i class="fa-solid fa-envelope fa-xl mx-2"></i></a>
-                                        <a href=""><i class="fa-brands fa-github fa-xl mx-2"></i></a>
-                                        <a href=""><i class="fa-brands fa-linkedin fa-xl mx-2"></i></a>
-                                        <a href=""><i class="fa-brands fa-whatsapp fa-xl mx-2"></i></a>
+                                        <a href="https://github.com/aprendizarthur" target="_blank"><i class="fa-brands fa-github fa-xl mx-2"></i></a>
+                                        <a href="https://www.linkedin.com/in/devarthurvieira/" target="_blank"><i class="fa-brands fa-linkedin fa-xl mx-2"></i></a>
+                                        <a href="https://wa.me/5553991625511" target="_blank"><i class="fa-brands fa-whatsapp fa-xl mx-2"></i></a>
                                     </section>
                                 </div>
                             </div>

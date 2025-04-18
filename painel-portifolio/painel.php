@@ -138,41 +138,41 @@ adicionaConteudo($mysqli);
                                 
                                 <div class="form-group my-2">
                                     <label for="titulo" class="poppins-regular preto">Título</label>
-                                    <input required value="<?php if(!empty($_SESSION['input-titulo'])){echo $_SESSION['input-titulo']; unset($_SESSION['input-titulo']);}?>" class="form-control" type="text" name="titulo">
+                                    <input spellcheck="true" required value="<?php if(!empty($_SESSION['input-titulo'])){echo $_SESSION['input-titulo']; unset($_SESSION['input-titulo']);}?>" class="form-control" type="text" name="titulo">
                                     <small class="mensagem-erro poppins-light"><?php if(!empty($_SESSION['erro-titulo'])){ echo $_SESSION['erro-titulo']; unset($_SESSION['erro-titulo']); }?></small>
                                 </div>
                                 
                                 <div class="form-group my-2">
                                     <label for="metatitle" class="poppins-regular preto">Meta Title</label>
-                                    <input required value="<?php if(!empty($_SESSION['input-metatitle'])){echo $_SESSION['input-metatitle']; unset($_SESSION['input-metatitle']);}?>" class="form-control poppins-regular cinza" type="text" name="metatitle">
+                                    <input spellcheck="true" required value="<?php if(!empty($_SESSION['input-metatitle'])){echo $_SESSION['input-metatitle']; unset($_SESSION['input-metatitle']);}?>" class="form-control poppins-regular cinza" type="text" name="metatitle">
                                     <small class="mensagem-erro poppins-light"><?php if(!empty($_SESSION['erro-metatitle'])){ echo $_SESSION['erro-metatitle']; unset($_SESSION['erro-metatile']);}?></small>
                                 </div>
 
                                 <div class="form-group my-2">
                                     <label for="descricao" class="poppins-regular preto">Descrição</label>
-                                    <input required value="<?php if(!empty($_SESSION['input-descricao'])){echo $_SESSION['input-descricao']; unset($_SESSION['input-descricao']);}?>" class="form-control poppins-regular" type="text" name="descricao">
+                                    <input spellcheck="true" required value="<?php if(!empty($_SESSION['input-descricao'])){echo $_SESSION['input-descricao']; unset($_SESSION['input-descricao']);}?>" class="form-control poppins-regular" type="text" name="descricao">
                                     <small class="mensagem-erro poppins-light"><?php if(!empty($_SESSION['erro-descricao'])){ echo $_SESSION['erro-descricao']; unset($_SESSION['erro-descricao']);}?></small>
                                 </div>
                                 
                                 <div class="form-group my-2">
                                     <label for="metadescription" class="poppins-regular preto">Meta Description</label>
-                                    <input value="<?php if(!empty($_SESSION['input-metadescription'])){echo $_SESSION['input-metadescription']; unset($_SESSION['input-metadescription']);}?>" required class="form-control poppins-regular cinza" type="text" name="metadescription">
+                                    <input spellcheck="true" value="<?php if(!empty($_SESSION['input-metadescription'])){echo $_SESSION['input-metadescription']; unset($_SESSION['input-metadescription']);}?>" required class="form-control poppins-regular cinza" type="text" name="metadescription">
                                     <small class="mensagem-erro poppins-light"><?php if(!empty($_SESSION['erro-metadescription'])){ echo $_SESSION['erro-metadescription']; unset($_SESSION['erro-metadescription']);}?></small>
                                 </div>
 
                                 <div class="form-group my-2">
                                     <label for="capa" class="poppins-regular preto">Capa</label>
-                                    <input required class="form-control poppins-regular cinza" type="text" name="capa">
+                                    <input required value="<?php if(!empty($_SESSION['input-capa'])){echo $_SESSION['input-capa']; unset($_SESSION['input-capa']);}?>" class="form-control poppins-regular cinza" type="text" name="capa">
                                 </div>
                                 
                                 <div class="form-group my-2">
                                     <label for="link" class="poppins-regular preto">Link github</label>
-                                    <input class="form-control poppins-regular cinza" type="text" name="link">
+                                    <input value="<?php if(!empty($_SESSION['input-link'])){echo $_SESSION['input-link']; unset($_SESSION['input-link']);}?>" class="form-control poppins-regular cinza" type="text" name="link">
                                 </div>
 
                                 <div class="form-group my-2">
                                     <label for="conteudo" class="poppins-regular preto">Conteúdo</label>
-                                    <textarea required name="conteudo" class="form-control poppins-regular"></textarea>
+                                    <textarea spellcheck="true" required name="conteudo" class="form-control poppins-regular"></textarea>
                                 </div>
 
                                 <button class="btn btn-primary mt-2" name="submit-conteudo"><span class="poppins-semibold">Adicionar</span></button>
