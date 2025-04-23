@@ -11,8 +11,6 @@ adicionarVisualização($mysqli);
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <!--Link canonico da página-->
-        <link rel="canonical" href=""/>
         <!-- Meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

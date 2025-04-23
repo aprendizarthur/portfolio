@@ -11,6 +11,7 @@ login($mysqli);
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+        <meta name="robots" content="noindex">
         <!--Link canonico da página-->
         <link rel="canonical" href=""/>
         <!-- Meta tags -->

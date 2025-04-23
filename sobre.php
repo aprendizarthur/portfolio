@@ -8,14 +8,14 @@ include 'functions/sessions.php';
 <html lang="pt-br">
     <head>
         <!--Link canonico da página-->
-        <link rel="canonical" href=""/>
+        <link rel="canonical" href="https://developerarthurvieira.com.br">
         <!-- Meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Título, Ícone, Descrição e Cor de tema p/ navegador -->
-        <title>Treino</title>
-        <link rel="icon" type="image/x-icon" href="">
-        <meta name="description" content="">
+        <title>Arthur Vieira - Sites e Conteúdo para o seu Negócio!</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <meta name="description" content="Confira o meu portfólio: Sites institucionais, conteúdo para mídias sociais e SEO para alavancar seu negócio. Veja os projetos!">
         <meta name="theme-color" content="#FFFFFF">
         <!-- Link CSS -->
         <link rel="stylesheet" href="css/style-portifolio.css">
@@ -58,24 +58,27 @@ include 'functions/sessions.php';
                     <div class="row d-flex justify-content-center mt-3 mb-3 text-light">
                         <div class="col-11 col-md-10 col-lg-10 p-4 text-center bg-preto" style="border-radius: 24px;">
                             <h1 class="h1-cta inter-bold d-inline">Oi, eu me chamo Arthur<span class="h1-cta inter-bold p-0 m-0 d-none d-lg-inline"> Vieira</span>!</h1>
-                            <p class="p-cta poppins-regular cinza mb-4">Sou freelancer desenvolvendo sites institucionais para empresas.</p> 
+                            <p class="p-cta poppins-regular cinza mb-4">Transformo sua empresa com uma presença online que atrai e engaja seus clientes.</p> 
                             <div class="row d-flex justify-content-center">
                                 <div class="col-12 col-md-5 col-lg-3 mb-2">
                                     <a class="py-2 btn btn-primary-cta" href="#projetos"><span class="poppins-semibold">Contato</span></a>
                                 </div>
                                 <div class="col-12 col-md-5 col-lg-3">
-                                    <a class="py-2 btn btn-secondary-cta" href=""><span class="poppins-semibold"><i class="i-secondary fa-solid fa-download fa-lg me-2"></i>Currículo</span></a>    
-                                </div>
-                                <div class="col-12 col-md-12 mt-4">
-                                    <section id="redes">
-                                        <a href=""><i class="fa-solid fa-envelope fa-xl mx-2"></i></a>
-                                        <a href="https://github.com/aprendizarthur" target="_blank"><i class="fa-brands fa-github fa-xl mx-2"></i></a>
-                                        <a href="https://www.linkedin.com/in/devarthurvieira/" target="_blank"><i class="fa-brands fa-linkedin fa-xl mx-2"></i></a>
-                                        <a href="https://wa.me/5553991625511" target="_blank"><i class="fa-brands fa-whatsapp fa-xl mx-2"></i></a>
-                                    </section>
+                                    <a class="py-2 btn btn-secondary-cta" href="curriculo.pdf" download><span class="poppins-semibold"><i class="i-secondary fa-solid fa-download fa-lg me-2"></i>Currículo</span></a>    
                                 </div>
                             </div>
                         </div> 
+                        <div class="col-12 col-md-12 mt-4 d-flex justify-content-center">
+                            <section id="redes">
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contato@developerarthurvieira.com.br" target="_blank"><i class="fa-solid fa-envelope fa-xl mx-2"></i></a>
+                                <a href="https://wa.me/5553991625511" target="_blank"><i class="fa-brands fa-whatsapp fa-xl mx-2"></i></a>
+                                <a href="https://github.com/aprendizarthur" target="_blank"><i class="fa-brands fa-github fa-xl mx-2"></i></a>
+                                <a href="https://www.instagram.com/devarthurvieira/" target="_blank"><i class="fa-brands fa-instagram fa-xl mx-2"></i></a>
+                                <a href="https://x.com/devarthurvieira" target="_blank"><i class="fa-brands fa-x-twitter fa-xl mx-2"></i></a>
+                                <a href=""><i class="fa-brands fa-facebook fa-xl mx-2"></i></a>
+                                <a href="https://www.linkedin.com/in/devarthurvieira/" target="_blank"><i class="fa-brands fa-linkedin fa-xl mx-2"></i></a>
+                            </section>
+                        </div>
                     </div>
                 </section>
             <!--FECHAMENTO SECTION CTA-->
@@ -87,11 +90,9 @@ include 'functions/sessions.php';
             <section id="contato">
                 <div class="row d-flex mt-5 mb-4 justify-content-center align-items-center">
                     <div class="col-11 col-md-10 bg-preto p-4 d-flex justify-content-center">
-                        <hgroup>
-                            <h1 class="inter-bold branco">Tem algum projeto em mente?</h1>
-                            <h2 class="poppins-semibold cinza">Entre em contato comigo.</h2>
-                            <a class="mt-3 py-2 btn btn-tertiary" href=""><span class="poppins-semibold">Contato</span></a>    
-                        </hgroup>
+                        <h1 class="inter-bold branco">Tem algum projeto em mente?</h1>
+                        <h2 class="poppins-semibold cinza">Entre em contato comigo.</h2>
+                        <a class="mt-3 py-2 btn btn-tertiary" href="https://wa.me/5553991625511"><span class="poppins-semibold">Contato</span></a>    
                     </div>
                 </div>
             </section>

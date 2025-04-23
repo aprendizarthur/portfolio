@@ -8,14 +8,14 @@ include 'functions/sessions.php';
 <html lang="pt-br">
     <head>
         <!--Link canonico da página-->
-        <link rel="canonical" href=""/>
+        <link rel="canonical" href="developerarthurvieira.com.br/blog">
         <!-- Meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Título, Ícone, Descrição e Cor de tema p/ navegador -->
-        <title>Treino</title>
-        <link rel="icon" type="image/x-icon" href="">
-        <meta name="description" content="">
+        <title>Blog</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <meta name="description" content="Leia as psotagens do meu blog: Dicas de SEO, Dicas de desenvolvimento web, Dicas para crescer seu negócio online e muito mais!">
         <meta name="theme-color" content="#FFFFFF">
         <!-- Link CSS -->
         <link rel="stylesheet" href="css/style-portifolio.css">
@@ -64,7 +64,7 @@ include 'functions/sessions.php';
                                     <input class="input-pesquisa form-control poppins-regular cinza" type="text" name="pesquisa">
                                 </div>
 
-                                <button class="btn btn-secondary-cta" name="submit-pesquisa" type="submit d-inline"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+                                <button class="btn btn-secondary-cta" name="submit-pesquisa" type="submit"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
                             </form>
                             <div id="categorias" class="d-none d-md-block">
                                 <a class="poppins-regular cinza d-inline mx-2" href="#noticia">Notícias</a>
@@ -84,11 +84,9 @@ include 'functions/sessions.php';
                  <section id="contato">
                         <div class="row d-flex justify-content-center align-items-center my-5">
                             <div class="col-11 col-md-10 bg-preto p-4 d-flex justify-content-center">
-                                <hgroup>
-                                    <h1 class="inter-bold branco">Tem algum projeto em mente?</h1>
-                                    <h2 class="poppins-semibold cinza">Entre em contato comigo.</h2>
-                                    <a class="mt-2 py-2 btn btn-tertiary" href="contato.php"><span class="poppins-semibold">Contato</span></a>    
-                                </hgroup>
+                                <h1 class="inter-bold branco">Tem algum projeto em mente?</h1>
+                                <h2 class="poppins-semibold cinza">Entre em contato comigo.</h2>
+                                <a class="mt-2 py-2 btn btn-tertiary" href="https://wa.me/5553991625511"><span class="poppins-semibold">Contato</span></a>    
                             </div>
                         </div>
                     </section>
