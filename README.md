@@ -27,7 +27,7 @@
   <li>CSS</li>
   <li>Bootstrap 5</li>
   <li>PHP</li>
-  <li>MySQL</li>
+  <li>phpMyAdmin</li>
   <li>SQL</li>
 </ul>
 
