@@ -58,7 +58,7 @@ session_start();
                             <p class="p-cta inter-regular cinza">O link que você acessou expirou ou o conteúdo foi excluído.</p> 
                             <div class="row d-flex justify-content-center">
                                 <div class="col-12 col-md-10 mb-2">
-                                    <a class="py-2 btn btn-primary" href="../sobre.php"><span class="poppins-semibold">Voltar</span></a>
+                                    <a class="py-2 btn btn-primary" href="../index.php"><span class="poppins-semibold">Voltar</span></a>
                                 </div>
                             </div>
                         </div> 

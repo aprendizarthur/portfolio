@@ -41,7 +41,7 @@ include 'functions/sessions.php';
                                 <ul>
                                     <?php atalhoPainel(); ?>
                                     <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="projetos.php">Projetos</a></li>
-                                    <li class="mx-2 poppins-semibold selecionado"><a class="px-3 py-2" href="sobre.php">Sobre</a></li>
+                                    <li class="mx-2 poppins-semibold selecionado"><a class="px-3 py-2" href="index.php">Sobre</a></li>
                                     <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="blog.php">Blog<i class="notificacao-blog fa-solid fa-circle fa-2xs" style="color: #f80808;"></i></a></li>
                                 </ul>
                             </nav>
@@ -90,9 +90,11 @@ include 'functions/sessions.php';
             <section id="contato">
                 <div class="row d-flex mt-5 mb-4 justify-content-center align-items-center">
                     <div class="col-11 col-md-10 bg-preto p-4 d-flex justify-content-center">
-                        <h1 class="inter-bold branco">Tem algum projeto em mente?</h1>
-                        <h2 class="poppins-semibold cinza">Entre em contato comigo.</h2>
-                        <a class="mt-3 py-2 btn btn-tertiary" href="https://wa.me/5553991625511"><span class="poppins-semibold">Contato</span></a>    
+                        <hgroup>
+                            <h1 class="inter-bold branco">Tem algum projeto em mente?</h1>
+                            <h2 class="poppins-semibold cinza">Entre em contato comigo.</h2>
+                            <a class="mt-3 py-2 btn btn-tertiary" href="https://wa.me/5553991625511"><span class="poppins-semibold">Contato</span></a>     
+                        </hgroup>
                     </div>
                 </div>
             </section>

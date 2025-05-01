@@ -4,5 +4,5 @@
     session_unset();
     session_destroy();
 
-    header("Location: ../sobre.php");
+    header("Location: ../index.php");
 ?>

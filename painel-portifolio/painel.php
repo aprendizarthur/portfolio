@@ -44,7 +44,7 @@ adicionaConteudo($mysqli);
                         <section id="nav-principal" class="mx-auto">
                             <nav>
                                 <ul>
-                                    <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="../sobre.php">Arthur</a></li>
+                                    <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="../index.php">Arthur</a></li>
                                     <li class="mx-2 poppins-semibold selecionado"><a class="px-3 py-2" href="sobre.php">Painel</a></li>
                                     <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="logout.php">Logout</a></li>
                                 </ul>

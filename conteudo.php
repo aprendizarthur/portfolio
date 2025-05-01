@@ -42,7 +42,7 @@ adicionarVisualização($mysqli);
                             <nav>
                                 <ul>
                                     <?php atalhoPainel(); ?>
-                                    <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="sobre.php">Arthur</a></li>
+                                    <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="index.php">Arthur</a></li>
                                     <li class="mx-2 poppins-semibold selecionado"><a class="px-3 py-2" href="#">Conteúdo</a></li>
                                     <li class="mx-2 poppins-regular"><a class="px-3 py-2" href="blog.php">Blog<i class="notificacao-blog fa-solid fa-circle fa-2xs" style="color: #f80808;"></i></a></li>
                                 </ul>

@@ -463,14 +463,14 @@
         }
 
     /*Telas médias*/
-    @media(min-width: 478px) and (max-width: 768px){
+    @media(min-width: 478px) and (max-width: 992px){
         .imagem-projeto{
-            height: 25vh !important;
+            height: 20vh !important;
             width: 100% !important;
         }
 
         .imagem-blog{
-            height: 25vh !important;
+            height: 20vh !important;
             width: 100% !important;
         }
     }
