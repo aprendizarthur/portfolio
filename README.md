@@ -1,5 +1,5 @@
 <div align="center "style="margin-top: 20px; margin-bottom: 20px;">
-  <h1>Portifólio</h1> <br>
+  <h1>Portfólio</h1> <br>
 </div>
 
 <div align="center" style="margin-top: 20px;">
