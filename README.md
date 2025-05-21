@@ -3,7 +3,7 @@
 </div>
 
 <div align="center" style="margin-top: 20px;">
-  <img src="images/assets/sobre.jpg" style="border-radius: 20px; max-width: 80%; height: auto;">
+  <img src="images/assets/1.jpg" style="border-radius: 20px; max-width: 80%; height: auto;">
 </div>
 
 <br>
